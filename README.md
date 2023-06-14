@@ -1,5 +1,5 @@
-# Scan_grabReceipt
-**Doc hoa don ban hang GrabFood** 
+# Scan_Receipt
+**Doc - trich xuat thong tin hoa don ban hang GFood** 
 
 ***thư viện hỗ trợ: pytesseract***
 
