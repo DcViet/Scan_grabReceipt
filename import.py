@@ -3,7 +3,7 @@ import csv
 import os
 import json
 
-with open ('/home/output_grab/output_1403.json', 'r') as file:
+with open ('/home/.../output_grab/output_1403.json', 'r') as file:
     data = json.load(file)
     text = data['text_list']
 
