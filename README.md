@@ -14,6 +14,8 @@ Trích xuất thông tin từ ảnh chụp màn hình hóa đơn G**bFood
 ```
   *Phương thức kết nối TCP/IP (wireless) : [https://github.com/Genymobile/scrcpy/pull/646](https://github.com/Genymobile/scrcpy/blob/master/doc/device.md)
 - 1 số bài viết tham khảo :
-- Tài liệu chính thức của Adb  https://github.com/mzlogin/awesome-adb/blob/master/README.en.md
+- Tài liệu chính thức của Adb 
+# ![Awesome Adb](./assets/title.md)
+-   https://github.com/mzlogin/awesome-adb/blob/master/README.en.md
 - [https://viblo.asia/p/su-dung-adb-de-tao-mot-so-automation-tool-thu-vi-tren-dien-thoai-android-4dbZNGXglYM]
 - [https://stackoverflow.com/questions/26586685/is-there-a-way-to-get-current-activitys-layout-and-views-via-adb]
