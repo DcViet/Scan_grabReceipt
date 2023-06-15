@@ -65,10 +65,67 @@ danh sách EventID :
 220: tăng độ sáng
 221: giảm độ sáng
 277: cut
-278: copy
+278: copy00
 279: paste
 ```
 
+Sử dụng thư viện **PyAutoGui**
+```
+PyAutoGUI là một thư viện Python mạnh mẽ cho phép tương tác với giao diện người dùng máy tính. Đây là một công cụ hữu ích để thực hiện tự động hóa các thao tác trên màn hình, bao gồm chụp màn hình, di chuyển chuột, nhấp chuột, gõ phím và thao tác khác.
+
+đây là một số tính năng và phương thức quan trọng của PyAutoGUI:
+
+1. Chụp màn hình: có thể sử dụng phương thức `screenshot()` để chụp một ảnh của toàn bộ màn hình hoặc `screenshot(region=(x, y, width, height))` để chụp một vùng cụ thể trên màn hình.
+
+2. Di chuyển chuột: có thể di chuyển chuột đến một vị trí cụ thể trên màn hình bằng cách sử dụng phương thức `moveTo(x, y)` hoặc di chuyển tới một đối tượng trên màn hình bằng cách sử dụng phương thức `locateCenterOnScreen(image)` để xác định vị trí của hình ảnh trên màn hình.
+
+3. Nhấp chuột: có thể thực hiện các thao tác nhấp chuột bằng cách sử dụng phương thức `click(x, y)` để nhấp chuột vào một vị trí cụ thể trên màn hình hoặc `click()` để nhấp chuột vào vị trí hiện tại của chuột.
+
+4. Gõ phím: PyAutoGUI có phương thức `typewrite(text)` để gõ phím một đoạn văn bản cụ thể. có thể gõ các phím đặc biệt như `enter`, `tab`, `ctrl`, `alt`, v.v.
+
+5. Delay và tương tác thời gian thực: sử dụng hàm `time.sleep(seconds)` để tạo độ trễ giữa các thao tác, giúp đảm bảo rằng các thao tác được thực hiện trong thời gian chính xác.
+
+```
+kết hợp cùng adb
+ - sử dụng subprocess.run() để chạy các lệnh adb từ python 
+```
+import subprocess
+import pyautogui
+
+# Hàm để chụp màn hình và lưu vào file ảnh
+def capture_screen(file_path):
+    subprocess.run(['adb', 'shell', 'screencap', '/sdcard/screenshot.png'])
+    subprocess.run(['adb', 'pull', '/sdcard/screenshot.png', file_path])
+
+# Hàm để click vào vị trí cụ thể trên màn hình
+def click_position(x, y):
+    subprocess.run(['adb', 'shell', 'input', 'tap', str(x), str(y)])
+
+# Hàm để thực hiện kịch bản khi có đơn hàng mới
+def process_new_order():
+    # Lưu trạng thái màn hình hiện tại
+    capture_screen('before.png')
+
+    # Click vào đơn hàng
+    click_position(500, 300)
+
+    # Chụp màn hình và lưu vào file ảnh
+    capture_screen('screenshot.png')
+
+    # Thực hiện các thao tác khác trên đơn hàng (có thể tinh chỉnh phù hợp với những app khác)
+    # ...
+
+    # Quay trở lại trạng thái ban đầu
+    click_position(700, 400)  # Ví dụ: Click vào nút "Quay lại"
+
+    # Lưu trạng thái màn hình sau khi quay lại
+    capture_screen('after.png')
+
+# Thực hiện kịch bản khi có đơn hàng mới
+process_new_order()
+
+
+```
 
 -https://github.com/mzlogin/awesome-adb/blob/master/README.en.md
 -[https://viblo.asia/p/su-dung-adb-de-tao-mot-so-automation-tool-thu-vi-tren-dien-thoai-android-4dbZNGXglYM]
