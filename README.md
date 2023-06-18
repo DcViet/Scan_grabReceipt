@@ -125,7 +125,7 @@ process_new_order()
 
 
 ```
-
--https://github.com/mzlogin/awesome-adb/blob/master/README.en.md
--[https://viblo.asia/p/su-dung-adb-de-tao-mot-so-automation-tool-thu-vi-tren-dien-thoai-android-4dbZNGXglYM]
--[https://stackoverflow.com/questions/26586685/is-there-a-way-to-get-current-activitys-layout-and-views-via-adb]
+> Một số thông tin tham khảo 
+- [github](https://github.com/mzlogin/awesome-adb/blob/master/README.en.md)
+- [viblo](https://viblo.asia/p/su-dung-adb-de-tao-mot-so-automation-tool-thu-vi-tren-dien-thoai-android-4dbZNGXglYM)
+- [stackoverflow](https://stackoverflow.com/questions/26586685/is-there-a-way-to-get-current-activitys-layout-and-views-via-adb)
