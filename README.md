@@ -14,7 +14,7 @@ Trích xuất thông tin từ ảnh chụp màn hình hóa đơn G**bFood
 ```
   *Phương thức kết nối TCP/IP (wireless) : [https://github.com/Genymobile/scrcpy/pull/646](https://github.com/Genymobile/scrcpy/blob/master/doc/device.md)*
   
-# 1 số bài viết tham khảo :
+# Triển :
 - Tài liệu chính thức của Adb (Android Debug Bridge)
 
 ![title](https://raw.githubusercontent.com/mzlogin/awesome-adb/master/assets/title.png)
